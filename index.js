@@ -25,16 +25,77 @@ const BinarySearch = (array, target) => {
 
 // console.log(BinarySearch(array, target));
 
-// Q. 2 find smallest number in array
+// Q. 2 find second smallest number in array
 
 var array = [4, 1, 6, 2, 8];
 var array = [10, 20, 30, 5, 7];
 
 const Smallest = (array) => {
 
+  let smallest = Infinity;
+  let secondSmallest = Infinity;
+
+  for (let i = 0; i < array.length; i++) {
+
+    console.log(array[i]);
+
+    if (array[i] < smallest) {       // 4 < infinity  1 < 4 true
+      secondSmallest = smallest; //  secondSmallest = inifinity
+      smallest = array[i];       //  smallest = 4
+
+
+      console.log("inside if")
+      console.log(` array[${i}] : ${array[i]} -- smallest : ${smallest} -- secondSmallest : ${secondSmallest}  `)
+    } else if (array[i] < secondSmallest) { // 1 < infinity
+
+      console.log("inside else if")
+
+      secondSmallest = array[i];    // secondSmallest = 1
+      console.log(`secondSmallest : ${secondSmallest}`)
+
+    }
+  }
+
+  return secondSmallest;
+
 };
 
 // console.log(Smallest(array));
+
+
+// var array = [10,20,30,5,7];
+
+// function SecondSmallest (array){
+
+//   let smallest = Infinity;
+//   let secondSmallest = Infinity;
+
+
+//   for(let i = 0 ; i < array.length ; i ++){
+
+//     if (array[i] < smallest){
+
+//       secondSmallest = smallest;
+
+//       smallest = array[i];
+
+
+
+//     }
+
+//     else if (array[i] < secondSmallest){
+
+//       secondSmallest = array[i];   }
+
+//   }
+
+//   return secondSmallest;
+
+// }
+
+// console.log(SecondSmallest(array))
+
+
 
 // Q.3
 
@@ -42,13 +103,29 @@ var word1 = "hello world";
 
 const ReverseWords = (word) => {
   console.log(word);
+let count = 0
+  for (let i = 0 ; i < word.length ; i++){
 
+    if(word[i] == " "){
+      break;
+
+    }
+    console.log(count)
+    console.log(word[i]);
+
+    var array1 =
+    count++;
+  }
+
+  for(let j = count ; j < word.length ; j ++){
+    console.log(word[j])
+  }
 
 
 
 };
 
-// console.log(ReverseWords(word1));
+console.log(ReverseWords(word1));
 
 
 // Q. 4 find missing numebr in array
